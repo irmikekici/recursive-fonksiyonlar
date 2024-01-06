@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void seri(int bas,int bit,int art)
+{
+	if(bas<=bit)
+	{
+		printf("%d\n",bas);
+		seri(bas+art,bit,art);
+	}
+	
+	
+}
+int main()
+{
+	int baslangic,bitis,artisdegeri;
+	printf("Lutfen baslangic degerini giriniz:\n");
+	scanf("%d",&baslangic);
+	printf("Lutfen bitis degerini giriniz:\n");
+	scanf("%d",&bitis);
+	printf("Lutfen artis miktarini giriniz:\n");
+	scanf("%d",&artisdegeri);
+	seri(baslangic,bitis,artisdegeri);
+    return 0;
+}
